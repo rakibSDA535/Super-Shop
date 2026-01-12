@@ -1,0 +1,31 @@
+﻿@model Khati.Models.Fish
+
+@{
+    ViewBag.Title = "Fish Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fish Details</h2>
+
+<div class="card" style="width: 25rem; margin-top:20px;">
+    @if (!string.IsNullOrEmpty(Model.Picture))
+    {
+        <img class="card-img-top" src="@Url.Content(Model.Picture)" alt="Fish Image" style="height:200px; object-fit:cover;" />
+    }
+    else
+    {
+        <img class="card-img-top" src="~/Images/no-image.png" alt="No Image" style="height:200px; object-fit:cover;" />
+    }
+
+    <div class="card-body">
+        <h4 class="card-title">@Model.FishName</h4>
+        <p class="card-text"><strong>Price:</strong> @Model.UnitPrice.ToString("C")</p>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FishId }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary" })
+</p>
+
+

@@ -1,0 +1,100 @@
+﻿@model Khati.Models.Customer
+@{
+    ViewBag.Title = "Customer Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="display-4">Customer Details</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-body text-center">
+                    @if (!string.IsNullOrEmpty(Model.Picture))
+                    {
+                        <img src="@Url.Content(Model.Picture)" class="card-img-top rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Customer Picture" />
+                    }
+                    else
+                    {
+                        <img src="~/Images/default-user.png" class="card-img-top rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="Default User Picture" />
+                    }
+                    <h5 class="card-title mt-3">@Model.CustomerName</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">General Information</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><strong>Phone:</strong> @Model.Phone</li>
+                        <li class="list-group-item"><strong>Age:</strong> @Model.Age</li>
+                        <li class="list-group-item"><strong>Last Purchase Date:</strong> @Model.DateOfPurchase.ToString("yyyy-MM-dd")</li>
+                        <li class="list-group-item"><strong>Member Status:</strong> @(Model.IsMember ? "Yes" : "No")</li>
+                        <li class="list-group-item"><strong>Total Price:</strong> $@Model.TotalPrice</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Purchased Items</h5>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Item Type</th>
+                                <th>Name</th>
+                                <th>Unit Price</th>
+                                <th>Picture</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.ProductItems != null && Model.ProductItems.Any())
+                            {
+                                foreach (var item in Model.ProductItems)
+                                {
+                                    <tr>
+                                        @if (item.Fish != null)
+                                        {
+                                            <td>Fish</td>
+                                            <td>@item.Fish.FishName</td>
+                                            <td>$@item.Fish.UnitPrice</td>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(item.Fish.Picture))
+                                                {
+                                                    <img src="@Url.Content(item.Fish.Picture)" alt="Fish Picture" style="width: 50px; height: 50px; object-fit: cover;" />
+                                                }
+                                            </td>
+                                        }
+                                        else if (item.Vegetable != null)
+                                        {
+                                            <td>Vegetable</td>
+                                            <td>@item.Vegetable.VegetableName</td>
+                                            <td>$@item.Vegetable.UnitPrice</td>
+                                            <td>
+                                                @if (!string.IsNullOrEmpty(item.Vegetable.Picture))
+                                                {
+                                                    <img src="@Url.Content(item.Vegetable.Picture)" alt="Vegetable Picture" style="width: 50px; height: 50px; object-fit: cover;" />
+                                                }
+                                            </td>
+                                        }
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="4" class="text-center">No items purchased.</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <a href="@Url.Action("Edit", new { id = Model.CustomerId })" class="btn btn-primary">Edit</a>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+

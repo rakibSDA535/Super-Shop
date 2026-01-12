@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Khati Supershop</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+        }
+
+        .body-content {
+            flex: 1;
+        }
+
+        footer a:hover {
+            color: #0d6efd !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            @Html.ActionLink("KHATI SUPERSHOP", "Index", "Home", new { area = "" }, new { @class = "navbar-brand fw-bold text-uppercase" })
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav me-3">
+                    <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Contact", "Contact", "Home", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Customer", "Index", "Customer", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Fish", "Index", "Fish", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Vegetable", "Index", "Vegetable", null, new { @class = "nav-link" })</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>    
+    <div class="container body-content mt-4">
+        @RenderBody()
+        <hr />
+    </div>
+    <footer class="bg-dark text-light text-center py-4 mt-auto">
+        <div class="container">
+            <p class="mb-2">&copy; @DateTime.Now.Year - Created By <strong>Rakibul Islam</strong></p>
+            <div>
+                <a href="#" class="text-light mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                <a href="#" class="text-light mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                <a href="mailto:support@khati.com" class="text-light mx-2"><i class="fa fa-envelope fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

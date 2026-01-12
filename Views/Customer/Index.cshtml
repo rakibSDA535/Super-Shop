@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Khati.Models.Customer>
+@{
+    ViewBag.Title = "Customer Information";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-3">Customer Information</h2>
+
+<div class="container">
+
+    @using (Html.BeginForm("Index", "Customer", FormMethod.Get))
+    {
+        <div class="input-group mb-3">
+            <input type="text" name="searchQuery" value="@ViewBag.SearchQuery" class="form-control" placeholder="Search by name or phone..." />
+            <button class="btn btn-primary" type="submit">Search</button>
+        </div>
+    }
+    <p>
+        @Html.ActionLink("➕ Add New Customer", "Create", "Customer", null, new { @class = "btn btn-success mb-3" })
+    </p>
+    
+    @Html.Partial("_Pagination")
+
+    @foreach (var customer in Model)
+    {
+        <div class="card mb-3 shadow-sm p-3">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="@customer.Picture" class="img-thumbnail" style="max-height:150px; width:auto;" />
+                </div>
+                <div class="col-md-10">
+                    <p><b>Customer:</b> @customer.CustomerName</p>
+                    <p><b>Phone:</b> @customer.Phone</p>
+                    <p><b>Age:</b> @customer.Age</p>
+                    <p><b>Date of Purchase:</b> @customer.DateOfPurchase.ToShortDateString()</p>
+                    <p><b>Member Status:</b> @(customer.IsMember ? "✅ Yes" : "❌ No")</p>
+                    <p><b>Total Price:</b> $@customer.TotalPrice</p>
+
+                    <div class="mb-2">
+                        <a href="@Url.Action("Edit","Customer", new { id = customer.CustomerId })" class="btn btn-success btn-sm"><i class="fa fa-pencil" style="font-size:30px;"></i></a>
+                        <a href="@Url.Action("Details","Customer", new { id = customer.CustomerId })" class="btn btn-warning btn-sm"><i class="fa fa-eye" style="font-size:30px;"></i></a>
+                        <a href="@Url.Action("Delete","Customer", new { id = customer.CustomerId })"
+                           class="btn btn-danger btn-sm"
+                           onclick="return confirm('Are you sure you want to delete this customer?');">
+                            <i class="fa fa-trash" style="font-size:30px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table table-bordered mt-2">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Item Type</th>
+                        <th>Name</th>
+                        <th>Unit Price</th>
+                        <th>Picture</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in customer.ProductItems)
+                    {
+                        if (item.Fish != null)
+                        {
+                            <tr>
+                                <td>Fish</td>
+                                <td>@item.Fish.FishName</td>
+                                <td>$@item.Fish.UnitPrice</td>
+                                <td><img src="@item.Fish.Picture" width="80" height="70" /></td>
+                            </tr>
+                        }
+                        if (item.Vegetable != null)
+                        {
+                            <tr>
+                                <td>Vegetable</td>
+                                <td>@item.Vegetable.VegetableName</td>
+                                <td>$@item.Vegetable.UnitPrice</td>
+                                <td><img src="@item.Vegetable.Picture" width="80" height="70" /></td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    @Html.Partial("_Pagination")
+
+</div>
+
+

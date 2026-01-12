@@ -1,0 +1,20 @@
+﻿@model Khati.Models.ViewModels.CustomerVM
+@{
+    var index = (int)ViewData["Index"];
+    var selectedVegetableId = (int?)ViewData["SelectedVegetableId"];
+}
+
+<div class="row mb-2 vegetable-row">
+    @Html.Label("Vegetable", "Select Vegetable", new { @class = "col-form-label col-3 fw-bold text-success" })
+    <div class="col-7 offset-3">
+        @Html.DropDownListFor(x => x.SelectedVegetableIds[index],
+            new SelectList(ViewBag.Vegetables, "Value", "Text", selectedVegetableId),
+            "--- Select Vegetable ---",
+            new { @class = "form-control" })
+    </div>
+    <div class="col-2">
+        <a href="#" class="btn btn-danger btn-sm remove-vegetable-row">
+            <i class="fa fa-times"></i> Remove
+        </a>
+    </div>
+</div>

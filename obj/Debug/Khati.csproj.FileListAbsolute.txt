@@ -1,0 +1,188 @@
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Khati.dll.config
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Khati.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Khati.pdb
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\csc.exe
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\csc.exe.config
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\csc.rsp
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\csi.exe
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\csi.exe.config
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\csi.rsp
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.Managed.Core.targets
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Buffers.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Collections.Immutable.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Memory.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Numerics.Vectors.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Reflection.Metadata.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\vbc.exe
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\vbc.exe.config
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\vbc.rsp
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\VBCSCompiler.exe
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\roslyn\VBCSCompiler.exe.config
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Antlr3.Runtime.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\EntityFramework.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\EntityFramework.SqlServer.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.AspNet.Identity.Core.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.Facebook.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.Google.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.OAuth.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.Twitter.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Web.Infrastructure.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Newtonsoft.Json.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Owin.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Helpers.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Mvc.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Optimization.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Razor.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.WebPages.Deployment.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.WebPages.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.WebPages.Razor.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\WebGrease.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\EntityFramework.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\EntityFramework.SqlServer.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.Facebook.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.Google.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.OAuth.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.Owin.Security.Twitter.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Newtonsoft.Json.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Helpers.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Mvc.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Razor.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.WebPages.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.WebPages.Deployment.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.WebPages.Razor.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\System.Web.Optimization.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Antlr3.Runtime.pdb
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.AspNet.Identity.Core.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\obj\Debug\Khati.csproj.AssemblyReference.cache
+F:\OneDrive\Desktop\1111\Khati\Khati\obj\Debug\Khati.csproj.CoreCompileInputs.cache
+F:\OneDrive\Desktop\1111\Khati\Khati\obj\Debug\Khati.csproj.Up2Date
+F:\OneDrive\Desktop\1111\Khati\Khati\obj\Debug\Khati.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\obj\Debug\Khati.pdb
+F:\OneDrive\Desktop\1111\Khati\Khati\obj\Debug\Khati.Migrations.SuperShop.resources
+F:\OneDrive\Desktop\1111\Khati\Khati\obj\Debug\Khati.csproj.GenerateResource.cache
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\PagedList.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\PagedList.Mvc.dll
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\PagedList.xml
+F:\OneDrive\Desktop\1111\Khati\Khati\bin\PagedList.Mvc.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Khati.dll.config
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Khati.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Khati.pdb
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\csc.exe
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\csc.exe.config
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\csc.rsp
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\csi.exe
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\csi.exe.config
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\csi.rsp
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Buffers.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Collections.Immutable.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Memory.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Numerics.Vectors.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Reflection.Metadata.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\vbc.exe
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\vbc.exe.config
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\vbc.rsp
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\VBCSCompiler.exe
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\roslyn\VBCSCompiler.exe.config
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Antlr3.Runtime.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\EntityFramework.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\EntityFramework.SqlServer.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.Google.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Web.Infrastructure.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Newtonsoft.Json.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Owin.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\PagedList.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\PagedList.Mvc.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Helpers.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Mvc.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Optimization.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Razor.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.WebPages.Deployment.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.WebPages.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.WebPages.Razor.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\WebGrease.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\EntityFramework.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\EntityFramework.SqlServer.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.Google.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Newtonsoft.Json.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\PagedList.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\PagedList.Mvc.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Helpers.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Mvc.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Razor.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.WebPages.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.WebPages.Deployment.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.WebPages.Razor.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\System.Web.Optimization.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Antlr3.Runtime.pdb
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\obj\Debug\Khati.csproj.AssemblyReference.cache
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\obj\Debug\Khati.Migrations.SuperShop.resources
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\obj\Debug\Khati.csproj.GenerateResource.cache
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\obj\Debug\Khati.csproj.CoreCompileInputs.cache
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\obj\Debug\Khati.csproj.Up2Date
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\obj\Debug\Khati.dll
+D:\ASP.MVC\Project\Code Fast\Khati\Khati\obj\Debug\Khati.pdb

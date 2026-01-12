@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Khati.Models.Fish>
+@{
+    ViewBag.Title = "Fish List";
+}
+<h2>Fish List</h2>
+@using (Html.BeginForm("Index", "Fish", FormMethod.Get))
+{
+    <div class="input-group mb-3">
+        <input type="text" name="searchQuery" value="@ViewBag.SearchQuery" class="form-control" placeholder="Search by fish name..." />
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+}
+<p>
+    @Html.ActionLink("➕ Create New", "Create", null, new { @class = "btn btn-primary mb-3" })
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>Fish Name</th>
+        <th>Unit Price</th>
+        <th>Picture</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var fish in Model)
+    {
+        <tr>
+            <td>@fish.FishName</td>
+            <td>$@fish.UnitPrice</td>
+            <td>
+                @if (!string.IsNullOrEmpty(fish.Picture))
+                {
+                    <img src="@Url.Content(fish.Picture)" alt="Fish Picture" style="width:100px; height:100px;" />
+                }
+            </td>
+            <td>
+                @Html.ActionLink("✏️ Edit", "Edit", new { id = fish.FishId }, new { @class = "btn btn-outline-success btn-sm" }) |
+                @Html.ActionLink("📄 Details", "Details", new { id = fish.FishId }, new { @class = "btn btn-outline-info btn-sm" }) |
+                @Html.ActionLink("🗑 Delete", "Delete", new { id = fish.FishId }, new { @class = "btn btn-outline-danger btn-sm" })
+            </td>
+        </tr>
+    }
+</table>
+@if (ViewBag.TotalPages > 1)
+{
+    <nav>
+        <ul class="pagination justify-content-end">
+            @if (ViewBag.CurrentPage > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1, searchQuery = ViewBag.SearchQuery })">Previous</a>
+                </li>
+            }
+
+            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+            {
+                if (i == ViewBag.CurrentPage)
+                {
+                    <li class="page-item active"><span class="page-link">@i</span></li>
+                }
+                else
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@Url.Action("Index", new { page = i, searchQuery = ViewBag.SearchQuery })">@i</a>
+                    </li>
+                }
+            }
+
+            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1, searchQuery = ViewBag.SearchQuery })">Next</a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
+
+
+
+

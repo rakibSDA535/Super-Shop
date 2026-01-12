@@ -1,0 +1,46 @@
+﻿@{
+        ViewBag.Title = "Home - Khati Supper Shop";
+    }
+
+    <div class="jumbotron text-center bg-success text-white p-5 rounded">
+        <h1 class="display-4 fw-bold">Welcome to Khati Supper Shop 🛒</h1>
+        <p class="lead">Fresh Fish, Meat, Vegetables & More – All in One Place!</p>
+        <hr class="my-4 bg-light" />
+        <p class="fs-5">👉 Shop for <strong>1000 Taka or more</strong> and become a <span class="badge bg-warning text-dark">Member</span> to enjoy <strong>20% Discount</strong> 🎉</p>
+        <a class="btn btn-light btn-lg" href="@Url.Action("Index","Customer")">Start Shopping</a>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100 border-0">
+                <img src="~/Images/fish.jpg" class="card-img-top" alt="Fresh Fish">
+                <div class="card-body">
+                    <h5 class="card-title">Fresh Fish</h5>
+                    <p class="card-text">Get fresh and healthy fish delivered to your door.</p>
+                    <a href="@Url.Action("Index","Fish")" class="btn btn-outline-success">Shop Fish</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100 border-0">
+                <img src="~/Images/meat.jpg" class="card-img-top" alt="Fresh Meat">
+                <div class="card-body">
+                    <h5 class="card-title">Fresh Meat</h5>
+                    <p class="card-text">High quality meat at the best price.</p>
+                    <a href="@Url.Action("Index","Meat")" class="btn btn-outline-success">Shop Meat</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card shadow h-100 border-0">
+                <img src="~/Images/vegetable.jpg" class="card-img-top" alt="Fresh Vegetables">
+                <div class="card-body">
+                    <h5 class="card-title">Fresh Vegetables</h5>
+                    <p class="card-text">Organic vegetables to keep you healthy.</p>
+                    <a href="@Url.Action("Index","Vegetable")" class="btn btn-outline-success">Shop Vegetables</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

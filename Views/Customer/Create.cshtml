@@ -1,0 +1,356 @@
+﻿@model Khati.Models.ViewModels.CustomerVM
+@{
+    ViewBag.Title = "Create Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container my-4">
+    @using (Ajax.BeginForm("Create", "Customer", new AjaxOptions
+    {
+        HttpMethod = "POST",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "msg",
+        OnSuccess = "onCreateSuccess",
+        OnFailure = "onCreateFailure"
+    }, new { enctype = "multipart/form-data", @class = "needs-validation" }))
+    {
+        @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-sm rounded-3">
+                <div class="card-body">
+                    <h3 class="card-title mb-3 text-primary">🧑 Add New Customer</h3>
+                    @Html.ValidationSummary(true, "", new { @class = "alert alert-danger" })
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.CustomerName, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(x => x.CustomerName, new { @class = "form-control", placeholder = "Enter full name" })
+                        @Html.ValidationMessageFor(x => x.CustomerName, "", new { @class = "text-danger small" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.Phone, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", placeholder = "e.g. 017XXXXXXXX" })
+                        @Html.ValidationMessageFor(x => x.Phone, "", new { @class = "text-danger small" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.DateOfPurchase, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(x => x.DateOfPurchase, new { @class = "form-control", type = "date" })
+                        @Html.ValidationMessageFor(x => x.DateOfPurchase, "", new { @class = "text-danger small" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.Age, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(x => x.Age, new { @class = "form-control", placeholder = "Enter age" })
+                        @Html.ValidationMessageFor(x => x.Age, "", new { @class = "text-danger small" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.PictureFile, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(x => x.PictureFile, new { @class = "form-control", @type = "file" })
+                        @if (!string.IsNullOrEmpty(Model.Picture))
+                        {
+                            <div class="mt-2">
+                                <img src="@Url.Content(Model.Picture)" width="60" class="rounded shadow-sm" alt="Customer Picture" />
+                            </div>
+                        }
+                        @Html.ValidationMessageFor(x => x.PictureFile, "", new { @class = "text-danger small" })
+                    </div>
+
+                    <div class="form-check mb-3">
+                        @Html.CheckBoxFor(x => x.IsMember, new { @class = "form-check-input" })
+                        @Html.LabelFor(x => x.IsMember, new { @class = "form-check-label fw-bold" })
+                    </div>
+
+                    <div class="mb-3">
+                        @Html.LabelFor(x => x.TotalPrice, new { @class = "form-label fw-bold" })
+                        @Html.TextBoxFor(x => x.TotalPrice, new { @class = "form-control", placeholder = "Enter total price" })
+                        @Html.ValidationMessageFor(x => x.TotalPrice, "", new { @class = "text-danger small" })
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* On Field Add Fish With Ajax *@
+        <div class="form-group mb-3">
+            <label class="form-label fw-bold">Select Fish</label>
+            <div class="input-group">
+                @* নিশ্চিত করুন dropdown-এর ID 'FishId' অথবা আপনার ViewModel অনুযায়ী আছে *@
+                <select id="FishIdSelect" name="FishId" class="form-control">
+                    <option value="">-- Select Fish --</option>
+                    @* এখানে লুপ চালিয়ে ডাটাবেস থেকে আসা মাছের লিস্ট দেখাবেন *@
+                </select>
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addFishModal">
+                    ➕ Add New Fish
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addFishModal" tabindex="-1" aria-labelledby="addFishModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addFishModalLabel">Add New Fish</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="newFishName" class="form-label fw-bold">Fish Name</label>
+                            <input type="text" id="newFishName" class="form-control" placeholder="Enter fish name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newFishPrice" class="form-label fw-bold">Unit Price</label>
+                            <input type="number" id="newFishPrice" class="form-control" placeholder="0.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Fish Picture</label>
+                            <input type="file" id="newFishPicture" class="form-control" accept="Images/*">
+                        </div>
+                        <p id="fishMessage" class="text-danger small"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="saveNewFish" class="btn btn-primary">Save Fish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* On Field Add Fish With Ajax *@
+        @* On Field Add Vegetable With Ajax *@
+        <div class="form-group mb-3">
+            <label class="form-label fw-bold text-success">Select Vegetable</label>
+            <div class="input-group">
+                @* নিশ্চিত করুন ড্রপডাউন ID 'VegetableIdSelect' আছে *@
+                <select id="VegetableIdSelect" name="VegetableId" class="form-control">
+                    <option value="">-- Select Vegetable --</option>
+                </select>
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#addVegetableModal">
+                    ➕ Add New Vegetable
+                </button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="addVegetableModal" tabindex="-1" aria-labelledby="addVegetableModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-success text-white">
+                        <h5 class="modal-title" id="addVegetableModalLabel">Add New Vegetable</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="newVegName" class="form-label fw-bold">Vegetable Name</label>
+                            <input type="text" id="newVegName" class="form-control" placeholder="Enter vegetable name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="newVegPrice" class="form-label fw-bold">Unit Price</label>
+                            <input type="number" id="newVegPrice" class="form-control" placeholder="0.00">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Vegetable Picture</label>
+                            <input type="file" id="newVegPicture" class="form-control" accept="image/*">
+                        </div>
+                        <p id="vegMessage" class="text-danger small"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="saveNewVegetable" class="btn btn-success">Save Vegetable</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* On Field Add Vegetable With Ajax *@
+        <div class="col-lg-6 mb-4">
+            <div class="card shadow-sm rounded-3 mb-4">
+                <div class="card-body">
+                    <h4 class="card-title text-success mb-3">🐟 Fish Purchases</h4>
+                    <div class="d-flex justify-content-end mb-2">
+                        <a href="#" id="btnAddFish" class="btn btn-outline-primary btn-sm">
+                            <i class="fa fa-plus-circle"></i> Add Fish
+                        </a>
+                    </div>
+                    <div id="fishContainer">
+                        @Html.Action("AddNewFishRow", new { index = 0 })
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm rounded-3">
+                <div class="card-body">
+                    <h4 class="card-title text-success mb-3">🥬 Vegetable Purchases</h4>
+                    <div class="d-flex justify-content-end mb-2">
+                        <a href="#" id="btnAddVegetable" class="btn btn-outline-primary btn-sm">
+                            <i class="fa fa-plus-circle"></i> Add Vegetable
+                        </a>
+                    </div>
+                    <div id="vegetableContainer">
+                        @Html.Action("AddNewVegetableRow", new { index = 0 })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="d-flex justify-content-end gap-2 mt-3">
+            <input type="submit" value="💾 Save Customer" class="btn btn-primary px-4 shadow-sm" />
+            <a href="@Url.Action("Index", "Customer")" class="btn btn-outline-secondary px-4 shadow-sm">Cancel</a>
+        </div>
+        <div id="msg" class="mt-3"></div>
+    }
+</div>
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script>
+        $(function () {
+            $('form[enctype="multipart/form-data"]').attr('enctype', 'multipart/form-data');
+
+            var fishCounter = 1, vegCounter = 1;
+
+            $('#btnAddFish').click(function (e) {
+                e.preventDefault();
+                $.get('@Url.Action("AddNewFishRow", "Customer")', { index: fishCounter }, function (data) {
+                    $('#fishContainer').append(data);
+                    fishCounter++;
+                });
+            });
+
+            $('#btnAddVegetable').click(function (e) {
+                e.preventDefault();
+                $.get('@Url.Action("AddNewVegetableRow", "Customer")', { index: vegCounter }, function (data) {
+                    $('#vegetableContainer').append(data);
+                    vegCounter++;
+                });
+            });
+
+            window.onCreateSuccess = function (data) {
+                if (data.success) {
+                    $('#msg').html('<div class="alert alert-success shadow-sm">' + data.message + '</div>');
+                    setTimeout(function () { window.location.href = '@Url.Action("Index", "Customer")'; }, 2000);
+                } else {
+                    $('#msg').html('<div class="alert alert-danger shadow-sm">' + data.message + '</div>');
+                }
+            };
+
+            window.onCreateFailure = function () {
+                $('#msg').html('<div class="alert alert-danger shadow-sm">An error occurred while saving the customer. Please try again.</div>');
+            };
+
+            $('#fishContainer').on('click', '.remove-fish-row', function (e) {
+                e.preventDefault();
+                $(this).closest('.fish-row').remove();
+            });
+
+            $('#vegetableContainer').on('click', '.remove-vegetable-row', function (e) {
+                e.preventDefault();
+                $(this).closest('.vegetable-row').remove();
+            });
+        });
+
+
+
+
+        // On Field Add Fish With Java Script
+        $('#saveNewFish').click(function () {
+            var formData = new FormData();
+            var fishName = $('#newFishName').val().trim();
+            var unitPrice = $('#newFishPrice').val();
+            var pictureFile = $('#newFishPicture')[0].files[0]; // ফাইলটি ধরা হচ্ছে
+
+            if (fishName === '') {
+                $('#fishMessage').text('Have Fish Name।');
+                return;
+            }
+
+            // FormData তে ডাটা অ্যাপেন্ড করা
+            formData.append("fishName", fishName);
+            formData.append("unitPrice", unitPrice);
+            if (pictureFile) {
+                formData.append("pictureFile", pictureFile);
+            }
+
+            $.ajax({
+                url: '/Fish/CreateFishAjax',
+                type: 'POST',
+                data: formData,
+                processData: false, // ফাইল পাঠানোর জন্য জরুরি
+                contentType: false, // ফাইল পাঠানোর জন্য জরুরি
+                success: function (response) {
+                    if (response.success) {
+                        // ড্রপডাউনে অ্যাড করা
+                        $('#FishIdSelect').append(
+                            $('<option>', { value: response.id, text: response.name, selected: true })
+                        );
+                        $('#addFishModal').modal('hide');
+                        alert('Created Fish Successfully!');
+                        // ফিল্ড রিসেট করুন
+                        $('#newFishName').val('');
+                        $('#newFishPrice').val('');
+                        $('#newFishPicture').val('');
+                    } else {
+                        $('#fishMessage').text(response.message);
+                    }
+                },
+                error: function () {
+                    $('#fishMessage').text('Server Error।');
+                }
+            });
+        });
+
+
+
+
+        $(document).ready(function () {
+            $('#saveNewVegetable').click(function () {
+                var formData = new FormData();
+                var vegName = $('#newVegName').val().trim();
+                var unitPrice = $('#newVegPrice').val();
+                var pictureFile = $('#newVegPicture')[0].files[0];
+
+                if (vegName === '') {
+                    $('#vegMessage').text('Named vegetable Frist।');
+                    return;
+                }
+
+                formData.append("vegName", vegName);
+                formData.append("unitPrice", unitPrice);
+                if (pictureFile) {
+                    formData.append("pictureFile", pictureFile);
+                }
+
+                $.ajax({
+                    url: '/Vegetable/CreateVegetableAjax', // কন্ট্রোলার এবং মেথড পাথ
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if (response.success) {
+                            // ড্রপডাউনে নতুন সবজি যোগ এবং সিলেক্ট করা
+                            $('#VegetableIdSelect').append(
+                                $('<option>', { value: response.id, text: response.name, selected: true })
+                            );
+
+                            $('#addVegetableModal').modal('hide');
+
+                            // ফিল্ড রিসেট
+                            $('#newVegName').val('');
+                            $('#newVegPrice').val('');
+                            $('#newVegPicture').val('');
+                            $('#vegMessage').text('');
+
+                            alert('Vegetable Created Successfully');
+                        } else {
+                            $('#vegMessage').text(response.message);
+                        }
+                    },
+                    error: function () {
+                        $('#vegMessage').text('Error to Create।');
+                    }
+                });
+            });
+        });
+    </script>
+}

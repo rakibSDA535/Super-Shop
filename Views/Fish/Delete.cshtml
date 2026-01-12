@@ -1,0 +1,54 @@
+﻿@model Khati.Models.Fish
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete Fish</h2>
+
+<h3>Are you sure you want to delete this fish?</h3>
+<div>
+    <h4>Fish Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FishName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FishName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitPrice)
+        </dd>
+
+        <dt>
+            Picture
+        </dt>
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.Picture))
+            {
+                <img src="@Url.Content(Model.Picture)" alt="Fish Picture" style="width:100px; height:100px;" />
+            }
+            else
+            {
+                <span>No Picture</span>
+            }
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color mt-3">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-secondary ms-2" })
+        </div>
+    }
+</div>
